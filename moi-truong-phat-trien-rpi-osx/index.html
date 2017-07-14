@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>RPi</title>
+    <title>Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X &middot; RPi</title>
     <meta name="generator" content="Hugo 0.26-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="https://rpi.vn/index.xml" rel="alternate" type="application/rss+xml" title="RPi" />
-      <link href="https://rpi.vn/index.xml" rel="feed" type="application/rss+xml" title="RPi" />
-    
-    <link rel="canonical" href="https://rpi.vn/"/>
+    <link rel="canonical" href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/"/>
     <link rel="icon" href="https://rpi.vn/favicon.ico">
     <link rel="apple-touch-icon" href="https://rpi.vn/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://rpi.vn/css/style.css">
@@ -23,14 +20,24 @@
     
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=vietnamese" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="RPi" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rpi.vn/" />
+    <meta property="og:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" />
+<meta property="og:description" content="Tổng quan
+
+Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
+
+Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
+
+Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" />
 
 
 
-<meta property="og:updated_time" content="2017-07-14T21:20:03&#43;07:00"/>
+<meta property="article:published_time" content="2017-07-14T21:16:03&#43;07:00"/>
+<meta property="article:modified_time" content="2017-07-14T21:16:03&#43;07:00"/>
+
 
 
 
@@ -43,11 +50,44 @@
 
     
     
-<meta itemprop="name" content="RPi">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X">
+<meta itemprop="description" content="Tổng quan
 
+Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
+
+Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
+
+Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+
+">
+
+
+<meta itemprop="dateModified" content="2017-07-14T21:16:03&#43;07:00" />
+<meta itemprop="wordCount" content="890">
+
+
+
+<meta itemprop="keywords" content="install," />
 
     
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X"/>
+<meta name="twitter:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X"/>
+<meta name="twitter:description" content="Tổng quan
+
+Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
+
+Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
+
+Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+
+"/>
+<meta name="twitter:site" content="@iotmakervn"/>
+
     
 
     
@@ -268,165 +308,11 @@
 
     <section id="main">
     
-    
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
-        <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" itemprop="url">
-            <img src="https://rpi.vn/post/begin/usb-3g/usb3g.jpg" class="article-banner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/">
-    <h1 class="article-title" itemprop="name">
-        Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-07-14 21:20:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-07-14</time>
-            &middot;
-            549
-            words
-            &middot;
-            3
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/categories/install">install</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/tags/usb3g">usb3g</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                <p>Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.</p>
-
-<p></p>
-            </p>
-            <p class="article-more-link">
-                <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" data-id="6b3a234a34b2b9360e43608d27226166" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" itemprop="url">
             <img src="https://rpi.vn/post/begin/osx-setup/banner.jpg" class="article-banner">
         
-        </a>
 
         <header class="article-header">
     <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/">
@@ -479,8 +365,7 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>
-                <h1 id="tổng-quan">Tổng quan</h1>
+            <h1 id="tổng-quan">Tổng quan</h1>
 
 <p>Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi + BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.</p>
 
@@ -489,12 +374,102 @@
 <p>Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  <strong>Không cần Monitor HDMI, không cần cáp mạng</strong></p>
 
 <p></p>
-            </p>
-            <p class="article-more-link">
-                <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/">
-                    Read more
-                </a>
-            </p>
+
+<p><img src="/post/begin/osx-setup/01.png" alt="alt text" /></p>
+
+<h1 id="thực-hiện">Thực hiện</h1>
+
+<h2 id="phần-cứng">Phần cứng</h2>
+
+<ul>
+<li>Một Raspberry PI, nếu trước phiên bản 3 thì cần mua 1 USB Wifi, theo kinh nghiệm thì chỉ cần mua loại thông dụng thì RPI sẽ tự nhận (TPLink, TotoLink &hellip;)</li>
+<li>Nguồn thì cắm trực tiếp vào máy tính là đủ, nếu không thì dùng Adapter sạc điện thoại, hoặc mua adapter rời</li>
+<li>Đảm bảo là có quyền truy cập vào Modem &amp; Router (nếu có)</li>
+<li>Một máy tính kết nối trực tiếp đến Modem/Router mà RPI sẽ kết nối.</li>
+<li>Thẻ nhớ: 8Gb tốt nhất</li>
+</ul>
+
+<h2 id="cài-đặt-hỗ-trợ-đọc-ghi-ext2-3-cho-osx">Cài đặt hỗ trợ đọc ghi Ext2/3 cho OSX</h2>
+
+<p>Bởi vì RPI sử dụng định dạng Ext3/4, nên phải đảm bảo máy Mac cũng đọc/ghi được định dạng này
+- Cài đặt <a href="http://osxfuse.github.io/">Fuse for OS X</a>
+- Cài đặt <a href="http://sourceforge.net/projects/fuse-ext2/">fuse-ext2</a>
+- Khi cài đặt xong chỉ hỗ trợ read-only, cần thay đổi chế độ đọc/ghi
+    - Edit file: <code>/System/Library/Filesystems/fuse-ext2.fs/fuse-ext2.util</code>
+    - Tìm tính năng <code>Mount</code>
+    - Sửa dòng có <code>OPTIONS=&quot;auto_xattr,defer_permissions&quot;</code> bằng <code>OPTIONS=&quot;auto_xattr,defer_permissions,rw+&quot;</code></p>
+
+<h2 id="cài-đặt-raspbian">Cài đặt <em>Raspbian</em></h2>
+
+<ul>
+<li>Tài bản Raspbian mới nhất, nên dùng bản lite cho ứng dụng headless <a href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a></li>
+<li>Cắm thẻ nhớ vào, mở command thực hiện lệnh <code>diskutil list</code></li>
+<li>Xác định tên disk khi cắm thẻ nhớ vào, không chắc thì rút ra, thực hiện <code>diskutil list</code> rồi cắm lại thực hiện lại lệnh trên. Ở đây ví dụ <code>disk3</code>, rồi thực hiện các lệnh:
+
+<ul>
+<li><code>diskutil unmountDisk /dev/disk3</code></li>
+<li><code>sudo newfs_msdos -F 16 /dev/disk3</code></li>
+<li><code>sudo dd if=~/Desktop/rpi.dmg of=/dev/rdisk3 bs=1m</code></li>
+</ul></li>
+<li>Lưu ý: <code>~/Desktop/rpi.dmg</code> là đường dẫn tới file ảnh Raspbian tải về, <code>rdisk3</code> và <code>bs=1m</code> direct access sẽ giúp việc ghi nhanh hơn gấp nhiều lần. Muốn xem progress thực hiện thì nhấn tổ hợp <code>CTRL + T</code></li>
+<li>Sau khi thực hiện xong thì chúng ta có thẻ nhớ có thể khởi động được Raspbian.</li>
+</ul>
+
+<h2 id="kết-nối-wifi-và-ssh-tới-raspberry-pi">Kết nối Wifi và  SSH tới Raspberry PI</h2>
+
+<ul>
+<li>Rút thẻ nhớ vừa khởi tạo ra, cắm lại. Lúc này trên máy Mac sẽ mount 2 phân vùng, phân vùng boot và phân vùng root filesystem.</li>
+<li>Truy cập tới phân vùng root filesystem, sửa file <code>/etc/wpa-supplicant/wpa-supplicant.conf</code> với nội dung:</li>
+</ul>
+
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+  ssid=&quot;your ssid&quot;
+  psk=&quot;your pass&quot;
+}
+</code></pre>
+
+<ul>
+<li>Cắm thẻ nhớ vào RPI và cho khởi động</li>
+<li>Đăng nhập vào trang cấu hình của Modem (ví dụ: <a href="http://192.168.1.1">http://192.168.1.1</a>)</li>
+<li>Hầu hết tất cả các modem sẽ hiển thị DHCP Client list, tìm cái nào có host name là raspberrypi, lấy IP đó, ví dụ 192.168.1.123</li>
+<li>Mở terminal lên, ssh vào: <code>ssh pi@192.168.1.123</code> và gõ mật khẩu: <code>raspberry</code></li>
+<li>Thực hiện lệnh <code>passwd</code> để thay đổi mật khẩu (option)</li>
+</ul>
+
+<h2 id="cấu-hình-forward-port-và-ddns-cho-rpi">Cấu hình forward port và ddns cho RPI</h2>
+
+<ul>
+<li>Đăng ký tài khoản DDNS ở <a href="http://www.noip.com/">noip</a>, ví dụ: <code>myrpi.ddns.net</code></li>
+<li>Cài đặt cập nhật IP động cho modem, cập nhật tới url của DDNS, tuỳ từng loại modem, kiếm service nào tên DDNS, điền thông tin sử dụng dịch vụ noip. Điều này giúp domain <code>myrpi.ddns.net</code> luôn được cập nhật IP internet của modem nếu modem bị thay đổi IP</li>
+<li>Cầu hình forward port 22 tới địa chỉ IP của RPI, giúp tất cả các kết nối từ bên ngoài vào cổng 22 sẽ được forward trực tiếp tới RPI (đề SSH từ bên ngoài vào) - Việc cấu hình này cũng tuỳ từng loại modem, tuy nhiên kiếm dịch vụ Forward Port hay Virtual Server, hay đơn giản nhất là DMZ, forward tất cả dữ liệu tới IP nội bộ.</li>
+<li>Kiểm tra port đã open chưa ở : <a href="http://www.canyouseeme.org">http://www.canyouseeme.org</a></li>
+</ul>
+
+<h2 id="develop-app-từ-xa-over-ssh">Develop app từ xa over SSH</h2>
+
+<ul>
+<li>Đăng ký tài khoản tại <a href="https://codetasty.com">https://codetasty.com</a></li>
+<li>Setup workspace như hình
+<img src="/post/begin/osx-setup/02.png" alt="alt text" /></li>
+<li>Sau khi kết nối thành công bạn có thể dễ dàng develop app trên board RPI ở bất kỳ đâu, các ngôn ngữ hỗ trợ rất mạnh là C/C++, Python, Nodejs
+<img src="/post/begin/osx-setup/03.png" alt="alt text" /></li>
+</ul>
+
+<h1 id="một-số-lưu-ý">Một số lưu ý</h1>
+
+<ul>
+<li>Vài viết có ít thông tin về cấu hình forward port cũng như setup DDNS do trên thị trường có rất nhiều router, modem, không thể cụ thể hoá</li>
+<li>Nếu bạn có Router kết nối tới Modem, thì phải setup IP tĩnh của Router trong mạng của Modem, rồi DMZ modem sang Router, rồi setup forward port  từ Router tới RPI</li>
+<li>Trong hầu hết các Modem và Router sẽ cho phép setup <code>static DHCP assign</code>, bạn chỉ cần copy MAC của RPI và, và điền IP muốn assign, thì không cần phải setup IP tĩnh trên RPI, mỗi khi RPI xin IP qua DHCP sẽ được cấp đúng IP đó.</li>
+</ul>
+
+<h1 id="tham-khảo">Tham khảo:</h1>
+
+<ul>
+<li><a href="http://blog.darrenparkinson.uk/2013/10/accessing-raspberry-pi-filesystem-from.html">http://blog.darrenparkinson.uk/2013/10/accessing-raspberry-pi-filesystem-from.html</a></li>
+</ul>
         </div>
         <footer class="article-footer">
     <a data-url="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" data-id="c8cc5727aa57d6836607cc40079a43da" class="article-share-link">
@@ -574,12 +549,49 @@
 </footer>
 
     </div>
+
+    
+<nav id="article-nav">
+    
+
+    
+    <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601</div>
+    </a>
+    
+</nav>
+
+
 </article>
 
 
-<nav id="page-nav">
-
-</nav>
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rpi-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
 
 
     </section>
@@ -598,7 +610,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="RPi" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -624,7 +636,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="RPi" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
