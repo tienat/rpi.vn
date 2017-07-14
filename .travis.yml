@@ -1,8 +1,5 @@
-language: python
-python:
-  - 2.7
-install:
-  - sudo apt-get install hugo
+language: go
+install: go get -v github.com/spf13/hugo
 script: hugo
 after_success:
   - ./push.sh
