@@ -83,8 +83,6 @@
           
           <a class="main-nav-link" href="/about/">About</a>
           
-          <a class="main-nav-link" href="/2015/10/02/how-to-add-pages-to-the-menu/">How to add pages to the menu</a>
-          
 
           
           
@@ -130,8 +128,6 @@
           
           <td><a class="main-nav-link" href="/about/">About</a></td>
           
-          <td><a class="main-nav-link" href="/2015/10/02/how-to-add-pages-to-the-menu/">How to add pages to the menu</a></td>
-          
 
           
           
@@ -176,12 +172,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        4
+        3
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          5
+          1
         
         <span>
             Tags
@@ -250,6 +246,20 @@
           <td><a href="https://rpi.vn/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
+    </div>
+  </div>
+
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=673811629459918";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="fb-page" data-href="https://www.facebook.com/iotmaker.vn/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/iotmaker.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/iotmaker.vn/">IoT Maker Việt Nam</a></blockquote></div>
     </div>
   </div>
 </aside>
@@ -658,167 +668,6 @@
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        <a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/" itemprop="url">
-            <img src="https://rpi.vn/banners/placeholder.png" class="article-banner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/">
-    <h1 class="article-title" itemprop="name">
-        How to add pages to the menu
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2015-10-02 21:49:20 &#43;0200 &#43;0200" itemprop="datePublished">2015-10-02</time>
-            &middot;
-            23
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/categories/programming">programming</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/tags/golang">golang</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/tags/programming">programming</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/tags/theme">theme</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://rpi.vn/tags/hugo">hugo</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                I&rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
-menu = &quot;main&quot;  
-            </p>
-            <p class="article-more-link">
-                <a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/" data-id="7b5009c52e7a9a5159b64169e0ddd8bd" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -894,32 +743,6 @@ menu = &quot;main&quot;
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://rpi.vn/banners/placeholder.png)" alt="RPi" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://rpi.vn/categories/programming">
-                        programming
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://rpi.vn/2015/10/02/how-to-add-pages-to-the-menu/" class="title">How to add pages to the menu</a></p>
-                    <p class="item-date">
-                        <time datetime="2015-10-02 21:49:20 &#43;0200 &#43;0200" itemprop="datePublished">2015-10-02</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -927,23 +750,6 @@ menu = &quot;main&quot;
 
     
 
-
-<div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://rpi.vn/categories/programming">
-                    programming
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-        </ul>
-    </div>
-</div>
 
 
 
@@ -960,40 +766,8 @@ menu = &quot;main&quot;
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://rpi.vn/tags/golang">
-                    golang
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://rpi.vn/tags/hugo">
-                    hugo
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
                 <a class="category-list-link" href="https://rpi.vn/tags/markdown">
                     markdown
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://rpi.vn/tags/programming">
-                    programming
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://rpi.vn/tags/theme">
-                    theme
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1015,19 +789,7 @@ menu = &quot;main&quot;
     <div class="widget tagcloud">
         
         
-        <a href="https://rpi.vn/tags/golang" style="font-size: 12px;">golang</a>
-        
-        
-        <a href="https://rpi.vn/tags/hugo" style="font-size: 12px;">hugo</a>
-        
-        
         <a href="https://rpi.vn/tags/markdown" style="font-size: 12px;">markdown</a>
-        
-        
-        <a href="https://rpi.vn/tags/programming" style="font-size: 12px;">programming</a>
-        
-        
-        <a href="https://rpi.vn/tags/theme" style="font-size: 12px;">theme</a>
         
     </div>
 </div>
