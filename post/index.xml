@@ -13,36 +13,18 @@
     
     
     <item>
-      <title>Markdown Cheat Sheet</title>
-      <link>https://rpi.vn/2017/05/20/markdown-cheat-sheet/</link>
+      <title>Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X</title>
+      <link>https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>https://rpi.vn/2017/05/20/markdown-cheat-sheet/</guid>
-      <description>&lt;p&gt;This note demonstrates some of what &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; is capable of doing.&lt;/p&gt;
+      <guid>https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/</guid>
+      <description>&lt;h1 id=&#34;tổng-quan&#34;&gt;Tổng quan&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Note: Feel free to play with this page. Unlike regular notes, this doesn&amp;rsquo;t automatically save itself.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi + BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Using the gallery shortcode</title>
-      <link>https://rpi.vn/2017/05/20/using-the-gallery-shortcode/</link>
-      <pubDate>Sat, 20 May 2017 12:00:23 +0200</pubDate>
-      
-      <guid>https://rpi.vn/2017/05/20/using-the-gallery-shortcode/</guid>
-      <description>&lt;p&gt;This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.&lt;/p&gt;
+&lt;p&gt;Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Formulas with MathJax</title>
-      <link>https://rpi.vn/2017/05/20/formulas-with-mathjax/</link>
-      <pubDate>Sat, 20 May 2017 11:58:06 +0200</pubDate>
-      
-      <guid>https://rpi.vn/2017/05/20/formulas-with-mathjax/</guid>
-      <description>&lt;p&gt;Mathematical equations in form of LaTeX or MathML code can be rendered with the support of &lt;a href=&#34;https://www.mathjax.org&#34;&gt;MathJax&lt;/a&gt;. MathML works out of the box. If you&amp;rsquo;re using LaTeX you need to wrap your equation with &lt;code&gt;$$&lt;/code&gt; as shown in the following example:&lt;/p&gt;
+&lt;p&gt;Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  &lt;strong&gt;Không cần Monitor HDMI, không cần cáp mạng&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

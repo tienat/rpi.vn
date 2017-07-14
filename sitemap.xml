@@ -8,18 +8,8 @@
   </url>
   
   <url>
-    <loc>https://rpi.vn/2017/05/20/markdown-cheat-sheet/</loc>
+    <loc>https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rpi.vn/2017/05/20/using-the-gallery-shortcode/</loc>
-    <lastmod>2017-05-20T12:00:23+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rpi.vn/2017/05/20/formulas-with-mathjax/</loc>
-    <lastmod>2017-05-20T11:58:06+02:00</lastmod>
   </url>
   
   <url>
@@ -33,7 +23,13 @@
   </url>
   
   <url>
-    <loc>https://rpi.vn/tags/markdown/</loc>
+    <loc>https://rpi.vn/tags/install/</loc>
+    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rpi.vn/categories/install/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
     <priority>0</priority>
   </url>

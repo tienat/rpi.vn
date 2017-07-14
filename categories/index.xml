@@ -11,5 +11,14 @@
 	<atom:link href="https://rpi.vn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Install</title>
+      <link>https://rpi.vn/categories/install/</link>
+      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
+      
+      <guid>https://rpi.vn/categories/install/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

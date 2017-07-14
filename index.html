@@ -172,7 +172,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        3
+        1
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -273,12 +273,15 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" itemprop="url">
+            <img src="https://rpi.vn/post/begin/osx-setup/banner.jpg" class="article-banner">
+        
         </a>
 
         <header class="article-header">
-    <a href="https://rpi.vn/2017/05/20/markdown-cheat-sheet/">
+    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/">
     <h1 class="article-title" itemprop="name">
-        Markdown Cheat Sheet
+        Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X
     </h1>
     </a>
     <div class="article-meta">
@@ -288,15 +291,24 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-05-20 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
             &middot;
-            421
+            890
             words
             &middot;
-            2
+            5
             minute read
         </div>
         
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://rpi.vn/categories/install">install</a>
+                
+                
+            </div>
             
         
 
@@ -307,7 +319,7 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://rpi.vn/tags/markdown">markdown</a>
+                <a class="article-category-link" href="https://rpi.vn/tags/install">install</a>
                 
                 
             </div>
@@ -318,283 +330,29 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                <p>This note demonstrates some of what <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
+                <h1 id="tổng-quan">Tổng quan</h1>
 
-<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn&rsquo;t automatically save itself.</em></p>
+<p>Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi + BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.</p>
+
+<p>Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.</p>
+
+<p>Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  <strong>Không cần Monitor HDMI, không cần cáp mạng</strong></p>
 
 <p></p>
             </p>
             <p class="article-more-link">
-                <a href="https://rpi.vn/2017/05/20/markdown-cheat-sheet/">
+                <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://rpi.vn/2017/05/20/markdown-cheat-sheet/" data-id="74a465046a917f5d40c5e9a053394724" class="article-share-link">
+    <a data-url="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" data-id="c8cc5727aa57d6836607cc40079a43da" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://rpi.vn/2017/05/20/markdown-cheat-sheet/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/">
-    <h1 class="article-title" itemprop="name">
-        Using the gallery shortcode
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-20 12:00:23 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-            &middot;
-            33
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                <p>This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.</p>
-
-<p></p>
-            </p>
-            <p class="article-more-link">
-                <a href="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/" data-id="b5878041fdfd74bbf2f0b2b55108eb61" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://rpi.vn/2017/05/20/formulas-with-mathjax/">
-    <h1 class="article-title" itemprop="name">
-        Formulas with MathJax
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-20 11:58:06 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-            &middot;
-            84
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                <p>Mathematical equations in form of LaTeX or MathML code can be rendered with the support of <a href="https://www.mathjax.org">MathJax</a>. MathML works out of the box. If you&rsquo;re using LaTeX you need to wrap your equation with <code>$$</code> as shown in the following example:</p>
-
-<p></p>
-            </p>
-            <p class="article-more-link">
-                <a href="https://rpi.vn/2017/05/20/formulas-with-mathjax/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://rpi.vn/2017/05/20/formulas-with-mathjax/" data-id="632158e79a9ef41ae7a2b7d46d9476ac" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://rpi.vn/2017/05/20/formulas-with-mathjax/#disqus_thread" class="article-comment-link">
+    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -688,57 +446,26 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://rpi.vn/2017/05/20/markdown-cheat-sheet/" class="thumbnail">
+                    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" class="thumbnail">
                     
-                        <span class="thumbnail-image thumbnail-none"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="RPi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
                 <div class="item-inner">
                     
                     
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://rpi.vn/categories/install">
+                        install
+                        </a>
+                    </p>
                     
-                    <p class="item-title"><a href="https://rpi.vn/2017/05/20/markdown-cheat-sheet/" class="title">Markdown Cheat Sheet</a></p>
+                    
+                    <p class="item-title"><a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" class="title">Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X</a></p>
                     <p class="item-date">
                         <time datetime="2017-05-20 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="https://rpi.vn/2017/05/20/using-the-gallery-shortcode/" class="title">Using the gallery shortcode</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-20 12:00:23 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://rpi.vn/2017/05/20/formulas-with-mathjax/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="https://rpi.vn/2017/05/20/formulas-with-mathjax/" class="title">Formulas with MathJax</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-20 11:58:06 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
                     </p>
                 </div>
             </li>
@@ -750,6 +477,23 @@
 
     
 
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://rpi.vn/categories/install">
+                    install
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
 
 
 
@@ -766,8 +510,8 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://rpi.vn/tags/markdown">
-                    markdown
+                <a class="category-list-link" href="https://rpi.vn/tags/install">
+                    install
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -789,7 +533,7 @@
     <div class="widget tagcloud">
         
         
-        <a href="https://rpi.vn/tags/markdown" style="font-size: 12px;">markdown</a>
+        <a href="https://rpi.vn/tags/install" style="font-size: 12px;">install</a>
         
     </div>
 </div>
