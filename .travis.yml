@@ -1,0 +1,11 @@
+language: python
+python:
+  - 2.7
+install:
+  - sudo apt install hugo
+script: hugo
+after_success:
+  - ./push.sh
+env:
+  global:
+    - secure: "RklGLKS1ZCm49b2h7lDuAm/REEScSldtwuDKwdY2fKV7SvETtKF/GKn5rWXPLWxfdabw04/HX6HrgpwqIBEP2IIcDBAFz5ODiRrrqGQJucudbXjjxiEhKHlTHokldxujqxAU7hBg0nS93pdAGbflPZE8CEcAjDbcLooLyRFf0KZ7jatc5MwJSVv/xfesJT+/uoiGGwAu2sl6rPP6dQeyaFGHO4yOJ2aqOLr+hzWnylJFe1FoTlWbOtNDpPZu+Ct9pegWSspATVJ/ISttJI4A04I/LFIKw6Pke07tu7Vj0p8qd8aSGxPV+SejhSHFv4DE2Enb/dUXcaryw3R1JXDpKg2RrkJIlaG7hZwy3/JPgxkLT7IEttbR8Gt1u6ejb6oYhAUozz77tM8OlcxejGKmgWdb2ZPWZCgAD9C9F4RlXvBZlgIN4kP0qDK+HSYGFfHblKNWhpY0tl3VeVmq8zEhu3UvdZOJH2PGNIed4HpGlIiFyBU7g6Hqo5Pg6pDe2+EZoSlQaAsozi7M5Ko3zAg269VBHdqTJtwpFqRQ2MqT5BcKgYzfQ0c1aQooTsWN7fxYOTx2lVeJzixWSbnsr1XnnRN9x/iHap1ZfBYbQeB+epkjRbQLZg1MeHDNF5+mysAbNJMepL0WKQebAywZDm5EEd0LF7ujPIL7lat/YpzfMAM="
