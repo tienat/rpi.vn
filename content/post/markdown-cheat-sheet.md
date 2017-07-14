@@ -1,12 +1,13 @@
 +++
 banner = ""
-categories = []
 date = "2017-05-20T12:10:51+02:00"
 description = ""
 images = []
 menu = ""
+categories = ["programming"]
 tags = ["markdown"]
 title = "Markdown Cheat Sheet"
+draft = true
 +++
 
 This note demonstrates some of what [Markdown][1] is capable of doing.
@@ -44,6 +45,17 @@ Paragraphs must be separated by a blank line. Basic formatting of *italics* and 
 ### Code block
 
     Code blocks are very useful for developers and other people who look at code or other things that are written in plain text. As you can see, it uses a fixed-width font.
+
+
+Or
+
+```
+this.is.code = "hello"
+```
+
+Video sample 
+
+{{<youtube z5EXNfHYPfQ>}}
 
 You can also make `inline code` to add code into other things.
 
