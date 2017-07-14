@@ -2,7 +2,7 @@ language: python
 python:
   - 2.7
 install:
-  - sudo apt install hugo
+  - sudo apt-get install hugo
 script: hugo
 after_success:
   - ./push.sh
