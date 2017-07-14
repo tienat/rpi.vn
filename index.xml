@@ -7,24 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
-    <lastBuildDate>Fri, 14 Jul 2017 18:07:42 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jul 2017 21:20:03 +0700</lastBuildDate>
     
 	<atom:link href="https://rpi.vn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>https://rpi.vn/about/</link>
-      <pubDate>Fri, 14 Jul 2017 18:07:42 +0700</pubDate>
+      <title>Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601</title>
+      <link>https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/</link>
+      <pubDate>Fri, 14 Jul 2017 21:20:03 +0700</pubDate>
       
-      <guid>https://rpi.vn/about/</guid>
-      <description></description>
+      <guid>https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/</guid>
+      <description>&lt;p&gt;Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X</title>
       <link>https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/</link>
-      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
+      <pubDate>Fri, 14 Jul 2017 21:16:03 +0700</pubDate>
       
       <guid>https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/</guid>
       <description>&lt;h1 id=&#34;tổng-quan&#34;&gt;Tổng quan&lt;/h1&gt;
@@ -36,6 +38,15 @@
 &lt;p&gt;Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  &lt;strong&gt;Không cần Monitor HDMI, không cần cáp mạng&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://rpi.vn/about/</link>
+      <pubDate>Fri, 14 Jul 2017 18:07:42 +0700</pubDate>
+      
+      <guid>https://rpi.vn/about/</guid>
+      <description></description>
     </item>
     
   </channel>

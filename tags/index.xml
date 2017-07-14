@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
-    <lastBuildDate>Sat, 20 May 2017 12:10:51 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jul 2017 21:16:03 +0700</lastBuildDate>
     
 	<atom:link href="https://rpi.vn/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>Install</title>
       <link>https://rpi.vn/tags/install/</link>
-      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
+      <pubDate>Fri, 14 Jul 2017 21:16:03 +0700</pubDate>
       
       <guid>https://rpi.vn/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Usb3g</title>
+      <link>https://rpi.vn/tags/usb3g/</link>
+      <pubDate>Fri, 14 Jul 2017 21:20:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/tags/usb3g/</guid>
       <description></description>
     </item>
     

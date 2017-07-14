@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usb3g on RPi</title>
+    <link>https://rpi.vn/tags/usb3g/</link>
+    <description>Recent content in Usb3g on RPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
+    <lastBuildDate>Fri, 14 Jul 2017 21:20:03 +0700</lastBuildDate>
+    
+	<atom:link href="https://rpi.vn/tags/usb3g/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601</title>
+      <link>https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/</link>
+      <pubDate>Fri, 14 Jul 2017 21:20:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/</guid>
+      <description>&lt;p&gt;Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

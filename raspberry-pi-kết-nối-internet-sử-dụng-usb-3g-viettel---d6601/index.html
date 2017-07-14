@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X &middot; RPi</title>
+    <title>Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601 &middot; RPi</title>
     <meta name="generator" content="Hugo 0.26-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/"/>
+    <link rel="canonical" href="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/"/>
     <link rel="icon" href="https://rpi.vn/favicon.ico">
     <link rel="apple-touch-icon" href="https://rpi.vn/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://rpi.vn/css/style.css">
@@ -20,23 +20,17 @@
     
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=vietnamese" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" />
-<meta property="og:description" content="Tổng quan
-
-Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
-
-Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
-
-Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+    <meta property="og:title" content="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601" />
+<meta property="og:description" content="Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" />
+<meta property="og:url" content="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/" />
 
 
 
-<meta property="article:published_time" content="2017-07-14T21:16:03&#43;07:00"/>
-<meta property="article:modified_time" content="2017-07-14T21:16:03&#43;07:00"/>
+<meta property="article:published_time" content="2017-07-14T21:20:03&#43;07:00"/>
+<meta property="article:modified_time" content="2017-07-14T21:20:03&#43;07:00"/>
 
 
 
@@ -50,24 +44,18 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
 
     
     
-<meta itemprop="name" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X">
-<meta itemprop="description" content="Tổng quan
-
-Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
-
-Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
-
-Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+<meta itemprop="name" content="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601">
+<meta itemprop="description" content="Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.
 
 ">
 
 
-<meta itemprop="dateModified" content="2017-07-14T21:16:03&#43;07:00" />
-<meta itemprop="wordCount" content="890">
+<meta itemprop="dateModified" content="2017-07-14T21:20:03&#43;07:00" />
+<meta itemprop="wordCount" content="549">
 
 
 
-<meta itemprop="keywords" content="install," />
+<meta itemprop="keywords" content="usb3g," />
 
     
 
@@ -75,15 +63,9 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
 
 
 
-<meta name="twitter:text:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X"/>
-<meta name="twitter:title" content="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X"/>
-<meta name="twitter:description" content="Tổng quan
-
-Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi &#43; BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.
-
-Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.
-
-Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  Không cần Monitor HDMI, không cần cáp mạng
+<meta name="twitter:text:title" content="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601"/>
+<meta name="twitter:title" content="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601"/>
+<meta name="twitter:description" content="Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.
 
 "/>
 <meta name="twitter:site" content="@iotmakervn"/>
@@ -311,13 +293,13 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
-            <img src="https://rpi.vn/post/begin/osx-setup/banner.jpg" class="article-banner">
+            <img src="https://rpi.vn/post/begin/usb-3g/usb3g.jpg" class="article-banner">
         
 
         <header class="article-header">
-    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/">
+    <a href="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/">
     <h1 class="article-title" itemprop="name">
-        Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X
+        Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601
     </h1>
     </a>
     <div class="article-meta">
@@ -325,12 +307,12 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-07-14 21:16:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-07-14</time>
+            <time datetime="2017-07-14 21:20:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-07-14</time>
             &middot;
-            890
+            549
             words
             &middot;
-            5
+            3
             minute read
         </div>
         
@@ -355,7 +337,7 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://rpi.vn/tags/install">install</a>
+                <a class="article-category-link" href="https://rpi.vn/tags/usb3g">usb3g</a>
                 
                 
             </div>
@@ -365,119 +347,152 @@ Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trư�
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="tổng-quan">Tổng quan</h1>
-
-<p>Hiện tại Raspberry PI đã ra phiên bản 3, với nhiều tính năng vượt trội, đặc biệt là đã tích hợp Wifi + BLE trong khi giá vẫn không đổi. Chính sự thay đổi này đã làm giá của RPI giảm đi rất nhiều, bởi vì trước đây việc sử dụng RPI bắt buộc phải mua thêm 1 cái USB Wifi là khó tránh khỏi.</p>
-
-<p>Nhưng, việc xây dựng môi trường lập trình ứng dụng trên RPI không phải là đơn giản, nếu bạn không có 1 cái màn hình hỗ trợ HDMI và không có luôn 1 cái cổng Mạng (Macbook giờ mất luôn cái cổng huyền thoại này :cry:) thì đảm bảo là không thể luôn.</p>
-
-<p>Bài viết này sẽ giúp bạn dễ dàng để xây dựng một môi trường lập trình hoàn hảo với 1 máy tính kết nối Wifi và 1 con RPI hỗ trợ Wifi.  <strong>Không cần Monitor HDMI, không cần cáp mạng</strong></p>
+            <p>Máy tính nhúng giá rẻ Raspberry Pi không còn xa lạ với các bạn thích công nghệ. Ngoài những ứng dụng dành cho giải trí đa phương tiện, Raspberry Pi rất thích hợp để phát triển các ứng dụng điều khiển từ xa, M2M.</p>
 
 <p></p>
 
-<p><img src="/post/begin/osx-setup/01.png" alt="alt text" /></p>
+<p><img src="https://www.raspberrypi.org/wp-content/uploads/2014/07/rsz_b-.jpg" alt="raspberry-pi" /></p>
 
-<h1 id="thực-hiện">Thực hiện</h1>
+<h1 id="nội-dung">Nội dung:</h1>
 
-<h2 id="phần-cứng">Phần cứng</h2>
+<p>Hướng dẫn nhanh dial-up 3G cho Raspberry Pi.</p>
 
-<ul>
-<li>Một Raspberry PI, nếu trước phiên bản 3 thì cần mua 1 USB Wifi, theo kinh nghiệm thì chỉ cần mua loại thông dụng thì RPI sẽ tự nhận (TPLink, TotoLink &hellip;)</li>
-<li>Nguồn thì cắm trực tiếp vào máy tính là đủ, nếu không thì dùng Adapter sạc điện thoại, hoặc mua adapter rời</li>
-<li>Đảm bảo là có quyền truy cập vào Modem &amp; Router (nếu có)</li>
-<li>Một máy tính kết nối trực tiếp đến Modem/Router mà RPI sẽ kết nối.</li>
-<li>Thẻ nhớ: 8Gb tốt nhất</li>
-</ul>
+<h3 id="công-cụ-và-các-thao-tác-chuẩn-bị">Công cụ và các thao tác chuẩn bị</h3>
 
-<h2 id="cài-đặt-hỗ-trợ-đọc-ghi-ext2-3-cho-osx">Cài đặt hỗ trợ đọc ghi Ext2/3 cho OSX</h2>
+<ol>
+<li>Máy tính nhúng Raspberry Pi cài đặt sẵn Raspbian (mình sử dụng model B+)</li>
+<li>USB 3G Viettel - D6601, cắm trực tiếp vào 1 trong 4 cổng USB (đảm bảo nguồn cấp cho RPi &gt; 1A)</li>
+<li>Kết nối đến RPi sử dụng SSH, hay gõ trực tiếp từ bàn phím, miễn sao terminal được.</li>
 
-<p>Bởi vì RPI sử dụng định dạng Ext3/4, nên phải đảm bảo máy Mac cũng đọc/ghi được định dạng này
-- Cài đặt <a href="http://osxfuse.github.io/">Fuse for OS X</a>
-- Cài đặt <a href="http://sourceforge.net/projects/fuse-ext2/">fuse-ext2</a>
-- Khi cài đặt xong chỉ hỗ trợ read-only, cần thay đổi chế độ đọc/ghi
-    - Edit file: <code>/System/Library/Filesystems/fuse-ext2.fs/fuse-ext2.util</code>
-    - Tìm tính năng <code>Mount</code>
-    - Sửa dòng có <code>OPTIONS=&quot;auto_xattr,defer_permissions&quot;</code> bằng <code>OPTIONS=&quot;auto_xattr,defer_permissions,rw+&quot;</code></p>
+<li><p>Cài đặt các công cụ cần thiết:</p>
 
-<h2 id="cài-đặt-raspbian">Cài đặt <em>Raspbian</em></h2>
-
-<ul>
-<li>Tài bản Raspbian mới nhất, nên dùng bản lite cho ứng dụng headless <a href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a></li>
-<li>Cắm thẻ nhớ vào, mở command thực hiện lệnh <code>diskutil list</code></li>
-<li>Xác định tên disk khi cắm thẻ nhớ vào, không chắc thì rút ra, thực hiện <code>diskutil list</code> rồi cắm lại thực hiện lại lệnh trên. Ở đây ví dụ <code>disk3</code>, rồi thực hiện các lệnh:
-
-<ul>
-<li><code>diskutil unmountDisk /dev/disk3</code></li>
-<li><code>sudo newfs_msdos -F 16 /dev/disk3</code></li>
-<li><code>sudo dd if=~/Desktop/rpi.dmg of=/dev/rdisk3 bs=1m</code></li>
-</ul></li>
-<li>Lưu ý: <code>~/Desktop/rpi.dmg</code> là đường dẫn tới file ảnh Raspbian tải về, <code>rdisk3</code> và <code>bs=1m</code> direct access sẽ giúp việc ghi nhanh hơn gấp nhiều lần. Muốn xem progress thực hiện thì nhấn tổ hợp <code>CTRL + T</code></li>
-<li>Sau khi thực hiện xong thì chúng ta có thẻ nhớ có thể khởi động được Raspbian.</li>
-</ul>
-
-<h2 id="kết-nối-wifi-và-ssh-tới-raspberry-pi">Kết nối Wifi và  SSH tới Raspberry PI</h2>
-
-<ul>
-<li>Rút thẻ nhớ vừa khởi tạo ra, cắm lại. Lúc này trên máy Mac sẽ mount 2 phân vùng, phân vùng boot và phân vùng root filesystem.</li>
-<li>Truy cập tới phân vùng root filesystem, sửa file <code>/etc/wpa-supplicant/wpa-supplicant.conf</code> với nội dung:</li>
-</ul>
-
-<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-network={
-  ssid=&quot;your ssid&quot;
-  psk=&quot;your pass&quot;
-}
+<pre><code>sudo apt-get update
+sudo apt-get install ppp usb-modeswitch wvdial
 </code></pre>
 
+<h3 id="thiết-lập-usbswitch-mode">Thiết lập usbswitch mode</h3>
+
+<p>Bởi vì hầu hết các USB 3G hiện nay chạy 2 chế độ mass storage (lưu trữ) và modem. Khi lần đầu cắm vào máy tính mà chưa cấu hình gì thì hầu hết sẽ chạy chế độ Mass Storage để cung cấp driver cho người sử dụng. Chế độ này thì không thể dial-up, do vậy cần chuyển sang chế độ modem.
+Cách để biết vendor và product id khi nào ở chế độ Mass Storage, khi nào ở chế độ Modem thì khá nhiều bài viết trên <code>mạng</code>, chỉ cần <code>google</code>: <code>raspberry pi usb 3g</code> thì có khá nhiều bài viết bổ ích. Đối với bài này thì chỉ đích danh USB 3G của Viettel rồi nên không hướng dẫn các thao tác đó nữa.</p></li>
+</ol>
+
+<p>Tiếp theo, sửa file:</p>
+
+<pre><code>sudo nano /etc/usb_modeswitch.conf
+</code></pre>
+
+<p>Thêm nội dung sao vào:</p>
+
+<pre><code>DefaultVendor=0x19d2 
+DefaultProduct=0x0154
+
+TargetVendor=0x19d2 
+TargetProduct=0x0108
+
+MessageContent=&quot;5553424312345678000000000000061e000000000000000000000000000000&quot;
+MessageContent2=&quot;5553424312345679000000000000061b000000020000000000000000000000&quot; 
+MessageContent3=&quot;55534243123456702000000080000c85010101180101010101000000000000&quot;
+</code></pre>
+
+<p><code>Ctrl + X  ==&gt; Y</code> để lưu</p>
+
+<p>Thực thi:</p>
+
+<pre><code>sudo usb_modeswitch -c /etc/usb_modeswitch.conf
+</code></pre>
+
+<p>để chuyển sang chế độ Modem</p>
+
+<pre><code>ls /dev/ttyUSB*
+</code></pre>
+
+<p>để kiểm tra xem có đủ <code>ttyUSB0 ... ttyUSB3</code> thì ok</p>
+
+<h3 id="thiết-lập-dial-up-ppp">Thiết lập dial-up ppp</h3>
+
+<p>Tạo file</p>
+
+<pre><code>sudo nano /etc/wvdial.conf 
+</code></pre>
+
+<p>Thêm nội dung sau:</p>
+
+<pre><code>[Dialer 3gviettel] 
+Init1 = ATZ 
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0 
+Init3 = AT+CGDCONT=1,&quot;IP&quot;,&quot;v-internet&quot; 
+Stupid Mode = 1 
+Modem Type = Analog Modem 
+ISDN = 0 
+Phone = *99# 
+Modem = /dev/ttyUSB3 
+Username = { } 
+Password = { } 
+Baud = 460800
+</code></pre>
+
+<p>Thực thi:</p>
+
+<pre><code>wvdial 3gviettel
+</code></pre>
+
+<p>xem kết quả:</p>
+
+<pre><code>pi@raspberrypi /tmp $ sudo wvdial 3gconnect
+--&gt; WvDial: Internet dialer version 1.61
+--&gt; Initializing modem.
+--&gt; Sending: ATZ
+ATZ
+OK
+--&gt; Sending: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+OK
+--&gt; Sending: AT+CGDCONT=1,&quot;IP&quot;,&quot;v-internet&quot;
+AT+CGDCONT=1,&quot;IP&quot;,&quot;v-internet&quot;
+OK
+--&gt; Modem initialized.
+--&gt; Sending: ATDT*99#
+--&gt; Waiting for carrier.
+ATDT*99#
+CONNECT 21600000
+--&gt; Carrier detected.  Starting PPP immediately.
+--&gt; Starting pppd at Wed May  6 15:52:34 2015
+--&gt; Pid of pppd: 3304
+--&gt; Using interface ppp0
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; local  IP address 27.78.39.146
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; remote IP address 10.64.64.64
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; primary   DNS address 203.113.131.6
+--&gt; pppd: б?[01]X??[01]???[01]
+--&gt; secondary DNS address 203.113.131.2
+--&gt; pppd: б?[01]X??[01]???[01]
+</code></pre>
+
+<p>thì coi như Raspberry Pi của bạn đã kết nối internet được sử dụng 3G.</p>
+
+<p>Nếu muốn tự động kết nối khi mất kết nối, dial khi khởi động, có thể tham khảo thêm: <a href="https://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/">https://lawrencematthew.wordpress.com/2013/08/07/connect-raspberry-pi-to-a-3g-network-automatically-during-its-boot/</a></p>
+
+<h3 id="nguồn-tham-khảo">Nguồn tham khảo</h3>
+
 <ul>
-<li>Cắm thẻ nhớ vào RPI và cho khởi động</li>
-<li>Đăng nhập vào trang cấu hình của Modem (ví dụ: <a href="http://192.168.1.1">http://192.168.1.1</a>)</li>
-<li>Hầu hết tất cả các modem sẽ hiển thị DHCP Client list, tìm cái nào có host name là raspberrypi, lấy IP đó, ví dụ 192.168.1.123</li>
-<li>Mở terminal lên, ssh vào: <code>ssh pi@192.168.1.123</code> và gõ mật khẩu: <code>raspberry</code></li>
-<li>Thực hiện lệnh <code>passwd</code> để thay đổi mật khẩu (option)</li>
-</ul>
-
-<h2 id="cấu-hình-forward-port-và-ddns-cho-rpi">Cấu hình forward port và ddns cho RPI</h2>
-
-<ul>
-<li>Đăng ký tài khoản DDNS ở <a href="http://www.noip.com/">noip</a>, ví dụ: <code>myrpi.ddns.net</code></li>
-<li>Cài đặt cập nhật IP động cho modem, cập nhật tới url của DDNS, tuỳ từng loại modem, kiếm service nào tên DDNS, điền thông tin sử dụng dịch vụ noip. Điều này giúp domain <code>myrpi.ddns.net</code> luôn được cập nhật IP internet của modem nếu modem bị thay đổi IP</li>
-<li>Cầu hình forward port 22 tới địa chỉ IP của RPI, giúp tất cả các kết nối từ bên ngoài vào cổng 22 sẽ được forward trực tiếp tới RPI (đề SSH từ bên ngoài vào) - Việc cấu hình này cũng tuỳ từng loại modem, tuy nhiên kiếm dịch vụ Forward Port hay Virtual Server, hay đơn giản nhất là DMZ, forward tất cả dữ liệu tới IP nội bộ.</li>
-<li>Kiểm tra port đã open chưa ở : <a href="http://www.canyouseeme.org">http://www.canyouseeme.org</a></li>
-</ul>
-
-<h2 id="develop-app-từ-xa-over-ssh">Develop app từ xa over SSH</h2>
-
-<ul>
-<li>Đăng ký tài khoản tại <a href="https://codetasty.com">https://codetasty.com</a></li>
-<li>Setup workspace như hình
-<img src="/post/begin/osx-setup/02.png" alt="alt text" /></li>
-<li>Sau khi kết nối thành công bạn có thể dễ dàng develop app trên board RPI ở bất kỳ đâu, các ngôn ngữ hỗ trợ rất mạnh là C/C++, Python, Nodejs
-<img src="/post/begin/osx-setup/03.png" alt="alt text" /></li>
-</ul>
-
-<h1 id="một-số-lưu-ý">Một số lưu ý</h1>
-
-<ul>
-<li>Vài viết có ít thông tin về cấu hình forward port cũng như setup DDNS do trên thị trường có rất nhiều router, modem, không thể cụ thể hoá</li>
-<li>Nếu bạn có Router kết nối tới Modem, thì phải setup IP tĩnh của Router trong mạng của Modem, rồi DMZ modem sang Router, rồi setup forward port  từ Router tới RPI</li>
-<li>Trong hầu hết các Modem và Router sẽ cho phép setup <code>static DHCP assign</code>, bạn chỉ cần copy MAC của RPI và, và điền IP muốn assign, thì không cần phải setup IP tĩnh trên RPI, mỗi khi RPI xin IP qua DHCP sẽ được cấp đúng IP đó.</li>
-</ul>
-
-<h1 id="tham-khảo">Tham khảo:</h1>
-
-<ul>
-<li><a href="http://blog.darrenparkinson.uk/2013/10/accessing-raspberry-pi-filesystem-from.html">http://blog.darrenparkinson.uk/2013/10/accessing-raspberry-pi-filesystem-from.html</a></li>
+<li><a href="http://raspberrypi.org">http://raspberrypi.org</a></li>
+<li><a href="https://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial">https://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial</a></li>
 </ul>
         </div>
         <footer class="article-footer">
-    <a data-url="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" data-id="c8cc5727aa57d6836607cc40079a43da" class="article-share-link">
+    <a data-url="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/" data-id="6b3a234a34b2b9360e43608d27226166" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/#disqus_thread" class="article-comment-link">
+    <a href="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -553,14 +568,14 @@ network={
     
 <nav id="article-nav">
     
-
-    
-    <a href="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Newer
+          Older
       </strong>
-      <div class="article-nav-title">Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601</div>
+      <div class="article-nav-title">Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X</div>
     </a>
+    
+
     
 </nav>
 
@@ -610,7 +625,7 @@ network={
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/raspberry-pi-k%E1%BA%BFt-n%E1%BB%91i-internet-s%E1%BB%AD-d%E1%BB%A5ng-usb-3g-viettel---d6601/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -636,7 +651,7 @@ network={
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/m%C3%B4i-tr%C6%B0%E1%BB%9Dng-ph%C3%A1t-tri%E1%BB%83n-%E1%BB%A9ng-d%E1%BB%A5ng-cho-raspberry-pi-tr%C3%AAn-os-x/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
