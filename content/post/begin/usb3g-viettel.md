@@ -6,6 +6,7 @@ menu = ""
 categories = ["install"]
 tags = ["usb3g"]
 title = "Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601"
+slug = "rpi-ket-noi-internet-voi-usb3g-viettel"
 banner = "post/begin/usb-3g/usb3g.jpg"
 +++
 

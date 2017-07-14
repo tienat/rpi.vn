@@ -6,6 +6,7 @@ menu = ""
 categories = ["install"]
 tags = ["install"]
 title = "Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X"
+slug = "moi-truong-phat-trien-rpi-osx"
 banner = "post/begin/osx-setup/banner.jpg"
 +++
 
