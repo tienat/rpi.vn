@@ -5,7 +5,7 @@ images = []
 menu = ""
 categories = ["install"]
 tags = ["install"]
-title = "Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu"
+title = "Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu"
 slug = "rasbian-cho-raspberry-tren-linux"
 banner = "post/begin/ubuntu-setup/banner.png"
 +++
