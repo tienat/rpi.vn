@@ -5,7 +5,7 @@ images = []
 menu = ""
 categories = ["install"]
 tags = ["install"]
-title = "Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu"
+title = "Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu"
 slug = "rasbian-cho-raspberry-tren-linux"
 banner = "post/begin/ubuntu-setup/banner.png"
 +++
@@ -49,6 +49,7 @@ network={
   psk="your pass"
 }
 ```
+- Từ tháng 11/2016, Raspberry đã khóa SSH khi khởi động. Để mở khóa SSH, cần tạo 1 file ssh (lưu ý: file này không có phần mở rộng) trong phân vùng boot của SD Card
 - Cắm thẻ nhớ vào RPI và chờ khởi động trong khoảng 1 phút
 - Đăng nhập vào trang cấu hình của Modem (ví dụ: http://192.168.1.1)
 - Hầu hết tất cả các modem sẽ hiển thị DHCP Client list, tìm cái nào có host name là raspberrypi, lấy IP đó, ví dụ 192.168.1.12
