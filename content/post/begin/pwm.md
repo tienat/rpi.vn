@@ -7,7 +7,7 @@ categories = ["tutorial"]
 tags = ["tutorial"]
 title = "Điều chế độ rộng xung PWM trên Raspberry PI 3"
 slug = "pwm-led-python"
-banner = "post/begin/gpio/banner.png"
+banner = "post/begin/pwm/banner.png"
 +++
 
 # Tổng quan
