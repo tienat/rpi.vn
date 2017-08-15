@@ -73,31 +73,27 @@ banner = "post/begin/gpio/banner.png"
 ```
 import RPi.GPIO as GPIO
 import time
-LedPin = 11    # pin11
-def setup():
-  GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-  GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
-  GPIO.output(LedPin, GPIO.HIGH) # Set LedPin high(+3.3V) to turn on led
-def blink():
+LedPin = 11                         # pin11
+
+GPIO.setmode(GPIO.BOARD)            # Numbers GPIOs by physical location
+GPIO.setup(LedPin, GPIO.OUT)        # Set LedPin's mode is output
+GPIO.output(LedPin, GPIO.HIGH)      # Set LedPin high(+3.3V) to turn on led
+
+try:
   while True:
     GPIO.output(LedPin, GPIO.HIGH)  # led on
     time.sleep(1)
-    GPIO.output(LedPin, GPIO.LOW) # led off
+    GPIO.output(LedPin, GPIO.LOW)   # led off
     time.sleep(1)
-def destroy():
-  GPIO.output(LedPin, GPIO.LOW)   # led off
-  GPIO.cleanup()                  # Release resource
-if __name__ == '__main__':     # Program start from here
-  setup()
-  try:
-    blink()
-  except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-    destroy()
+except KeyboardInterrupt:           # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+  pass
+  GPIO.output(LedPin, GPIO.LOW)     # led off
+  GPIO.cleanup()                    # Release resource
 ```
 - Lưu chương trình bằng cách nhấn Ctrl+X -> Y -> Enter
 - Để chạy chương trình, thực hiện lệnh `sudo python blink.py`. Nếu chương trình chạy đúng bạn có thể thấy LED chớp tắt với chu lỳ 1 giây.
 
-Trên đây là toàn bộ hướng dẫn giúp bạn giao tiếp với các thiết bị ngoại vi thông qua GPIO ở mode digital input/ouput của Raspberry PI với ví dụ điển hình là chớp tắt LED. Chúc các bạn thành công.
+Trên đây là toàn bộ hướng dẫn giúp bạn giao tiếp với các thiết bị ngoại vi thông qua GPIO ở mode Digital Ouput của Raspberry PI với ví dụ điển hình là chớp tắt LED. Chúc các bạn thành công.
 
 # Tham Khảo:
 - https://www.raspinews.com/blinking-led-on-raspberry-pi-using-python/

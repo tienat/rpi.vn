@@ -13,7 +13,7 @@ banner = "post/begin/gpio/banner.png"
 # Tổng quan
 - Trong bài học "Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" bạn đã được tìm hiểu về điều khiển LED thông qua chân GPIO của Raspberry PI 3. Trong bài học này, bạn sẽ học cách điều khiển độ sáng của LED thông qua một khái niệm đó là "Điều chế độ rộng xung PWM". Vậy PWM là gì:
     - Pulse Width Modulation (hay PWM): là phương pháp điều chỉnh năng lượng điện áp ngõ ra.
-    - Khác với phương pháp Digital Output (được sử dụng trong bài "Điều khiển nhấp nháy LED") chỉ có thể xuất ra 2 mức năng lượng điện áp là 0% và 100% thì với PWM bạn có thể xuất ra tất cả các mức năng lượng từ 0% đến 100%
+    - Khác với phương pháp Digital Output (được sử dụng trong bài "Điều khiển nhấp nháy LED") chỉ có thể xuất ra 2 mức năng lượng điện áp là 0% (LOW) và 100% (HIGH) thì với PWM bạn có thể xuất ra tất cả các mức năng lượng từ 0% đến 100%
     - Dưới đây là sơ đồ cho thấy tín hiệu từ chân PWM của Raspberry PI
 
     ![Sơ đồ tín hiệu từ chân PWM](/post/begin/pwm/01.png)
@@ -37,7 +37,7 @@ banner = "post/begin/gpio/banner.png"
 ![Kết nối LED với Raspberry PI 3](/post/begin/pwm/02.png)
 
 ## Giới thiệu về API GPIO cho PWM trên python
-- Tương tự như bài "Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python", ta vẫn sẽ phải sử dụng `import RPi.GPIO as GPIO` để gọi module điều khiển GPIO.
+- Tương tự như bài "Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python", ta vẫn sẽ sử dụng `import RPi.GPIO as GPIO` để gọi module điều khiển GPIO.
 - Cài đặt chân số 11 trên board làm ngõ ra
 
   ```
@@ -67,26 +67,25 @@ pwm.start(50)
 ```
 import RPi.GPIO as GPIO
 import time
-LedPin = 11    # pin11
-def setup():
-  GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-  GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
-  GPIO.output(LedPin, GPIO.HIGH) # Set LedPin high(+3.3V) to turn on led
-def blink():
-  while True:
-    GPIO.output(LedPin, GPIO.HIGH)  # led on
-    time.sleep(1)
-    GPIO.output(LedPin, GPIO.LOW) # led off
-    time.sleep(1)
-def destroy():
-  GPIO.output(LedPin, GPIO.LOW)   # led off
-  GPIO.cleanup()                  # Release resource
-if __name__ == '__main__':     # Program start from here
-  setup()
-  try:
-    blink()
-  except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-    destroy()
+LedPin = 11                         # Pin 11
+
+GPIO.setmode(GPIO.BOARD)            # Numbers GPIOs by physical location
+GPIO.setup(LedPin, GPIO.OUT)        # Set LedPin's mode is output
+
+pwm = GPIO.PWM(LedPin, 50)          # Frequency=50Hz
+pwm.start(0)                        # Start with PWM = 0
+try:
+  while 1:
+    for i in range(0, 101, 5):      # increase PWM 0 - 100
+      pwm.ChangeDutyCycle(i)
+      time.sleep(0.1)
+    for i in range(100, -1, -5):    # decrease PWM 100 - 0
+      pwm.ChangeDutyCycle(i)
+      time.sleep(0.1)
+except KeyboardInterrupt:           # When 'Ctrl+C' is pressed, the child program destroy() will be executed.
+  pass
+  pwm.stop()                        # Stop PWM
+  GPIO.cleanup()                    # Release resource
 ```
 - Lưu chương trình bằng cách nhấn Ctrl+X -> Y -> Enter
 - Để chạy chương trình, thực hiện lệnh `sudo python pwm.py`. Nếu chương trình chạy đúng bạn có thể thấy LED chớp tắt với chu lỳ 1 giây.
